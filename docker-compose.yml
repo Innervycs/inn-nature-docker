@@ -1,0 +1,15 @@
+services:
+  nature_ros2:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    container_name: nature_ros2
+    entrypoint: /ros_entrypoint.sh
+    environment:
+      - ROS_DOMAIN_ID=0
+      - RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix  # si se usa GUI en Linux (MacOS requiere XQuartz)
+    tty: true
+    stdin_open: true

@@ -1,0 +1,12 @@
+.git
+.gitignore
+*.swp
+*.log
+__pycache__/
+*.pyc
+.env
+*.db
+build/
+install/
+log/
+*.DS_Store
