@@ -20,7 +20,7 @@ RUN apt update && apt install -y \
     telnet \
     && rm -rf /var/lib/apt/lists/*
 
-RUN rosdep update
+RUN rosdep fix-permissions && rosdep update
 
 # Crear workspace y copiar entrypoint
 WORKDIR /root/ros2-ws
