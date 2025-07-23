@@ -7,7 +7,7 @@ RUN apt update && apt install -y \
     python3-colcon-common-extensions \
     python3-rosdep \
     python3-vcstool \
-    python3-pyserial \
+    python3-serial \
     build-essential \
     ros-humble-rviz2 \
     ros-humble-mavros* \
