@@ -11,5 +11,9 @@ services:
       - DISPLAY=${DISPLAY}
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix  # si se usa GUI en Linux (MacOS requiere XQuartz)
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0
+      - /dev/ttyACM1:/dev/ttyACM1
     tty: true
     stdin_open: true
+    network_mode: "host"
