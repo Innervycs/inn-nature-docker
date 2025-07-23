@@ -10,6 +10,9 @@ cd /root/ros2-ws
 echo "[INFO] Activando entorno del workspace..."
 source install/setup.bash
 
+echo "[INFO] Instalando Dependencias de geografia"
+source /opt/ros/humble/lib/mavros/install_geographiclib_datasets.sh
+
 if [ "$#" -eq 0 ]; then
   if ros2 pkg list | grep -q "^nature$"; then
     if [ -f "src/nature-stack/launch/example.launch.py" ]; then
